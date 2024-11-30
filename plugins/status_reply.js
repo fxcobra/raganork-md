@@ -1,6 +1,5 @@
-
 const {Module} = require('../main');
 
-Module({on: 'viewedUpdate', fromMe: false}, async (m) => {
+Module({pattern: 'autoreact', fromMe: true, desc: 'Auto react to status updates'}, async (m) => {
     await m.client.react(m.jid, m.key, '');
 });
